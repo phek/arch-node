@@ -1,2 +1,2 @@
 # Frontend Mockup Server
-Run **npm start** to start the server.
+Execute the bat-file (on windows) or run **npm start** to start the server.
