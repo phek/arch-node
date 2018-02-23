@@ -7,13 +7,15 @@ router.get('/', function(req, res){
 /* Mock Success */
 router.post('/authentication', function(req, res){
     res.status(200).json({
-        token: req.body.username + '-' + req.body.password
+		token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+        //token: req.body.username + '-' + req.body.password
     });
 });
 
 router.post('/registration', function(req, res){
     res.status(200).json({
-        token: req.body
+        token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+		//token: req.body
     });
 });
 
