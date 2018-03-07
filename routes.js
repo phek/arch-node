@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const ERROR = true;
+const ERROR = false;
 
 router.get('/', function(req, res){
     res.status(200).json();
@@ -19,6 +19,36 @@ if (!ERROR) {
 			token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
 			//token: req.body
 		});
+	});
+	
+	router.post('/applications', function(req, res){
+		res.status(200).json([
+			{
+				"competences": [
+					{
+					"competence": "Woop",
+					"yearsOfExperience": 32
+					},
+					{
+					"competence": "Test",
+					"yearsOfExperience": 42
+					},
+					{
+					"competence": "Test",
+					"yearsOfExperience": 0
+					}
+				],
+				"firstname": "asd",
+				"availabilities": [
+					{
+					"fromDate": 1520467200,
+					"toDate": 1521072000
+					}
+				],
+				"email": "asd",
+				"lastname": "asd"
+			}
+		]);
 	});
 } else {
 	/* Mock Error */
